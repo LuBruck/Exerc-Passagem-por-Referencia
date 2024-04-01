@@ -5,18 +5,18 @@ void pedir_nun(float *nun){
     scanf("%f", nun);
 }
 
-void cels_em_fah(float *temp){
-    *temp = (9* *temp /5) + 32;
+void fah_em_cels(float *temp){
+    *temp = 5* (*temp -32)/9;
 }
 
 void apresentar_temp(float temp){
-    printf("A temperatura dada, convertida em Farenheit, e: %.2f°\n", temp);
+    printf("A temperatura dada, convertida em Celsius, e: %.2f°\n", temp);
 }
 int main(){
     float temperatura;
 
     pedir_nun(&temperatura);
-    cels_em_fah(&temperatura);
+    fah_em_cels(&temperatura);
     apresentar_temp(temperatura);
 
     return 0;
